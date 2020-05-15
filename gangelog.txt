@@ -1,0 +1,5 @@
+** 14 may 2020
+- Figma mockup updated
+- added html pages
+- popup functions created
+
