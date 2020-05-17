@@ -16,7 +16,9 @@
     "gulp-jsvalidate": "^5.0.0",
     "gulp-notify": "^3.2.0",
     "gulp-sass": "^4.1.0",
-    "gulp-terser": "^1.2.0"
+    "gulp-terser": "^1.2.0",
+    "helmet": "^3.22.0",
+    "morgan": "^1.10.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
