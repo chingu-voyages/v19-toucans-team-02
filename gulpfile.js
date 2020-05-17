@@ -1,3 +1,19 @@
+/* to install all the needed packages, copy and paste in the terminal/command line the following lines (one by one)
+
+npm install gulp-sass --save-dev
+npm install gulp-notify --save-dev
+npm install gulp-autoprefixer --save-dev
+npm install gulp-cssnano --save-dev
+npm install gulp-concat-css --save-dev
+npm install gulp-jsvalidate --save-dev
+npm install gulp-terser --save-dev
+
+or all toghether in that way:
+
+npm install gulp-sass gulp-notify gulp-autoprefixer gulp-cssnano gulp-concat-css gulp-jsvalidate gulp-terser --save-dev
+
+*/
+
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     notify = require('gulp-notify'),
@@ -18,6 +34,8 @@ var theme = './',
     js_output_file = 'concat.js', 
     js_compressed_file = 'all.min.js';
 
+
+// merge all the sass file and compile it into css
 gulp.task('sass-compile', function () {
     return gulp.src(sass_file)
         .pipe(sass().on('error', sass.logError))
@@ -29,8 +47,9 @@ gulp.task('sass-compile', function () {
         }));
 });
 
+// check the css for browser compatibility and compress
 gulp.task('css-format', function () {
-    return gulp.src('./css/*.css')
+    return gulp.src('./public/css/*.css')
         .pipe(autoprefixer('last 3 version'))
         .pipe(concatcss(css_output_file))
         .pipe(cssnano())
@@ -42,6 +61,7 @@ gulp.task('css-format', function () {
         }));
 });
 
+// check the js and merge in one file
 gulp.task('js-concat', function () {
     return gulp.src(js_input)
         .pipe(jsvalidate())
@@ -53,8 +73,9 @@ gulp.task('js-concat', function () {
         }));
 });
 
+// compress the js file
 gulp.task('js-compress', function () {
-    return gulp.src('./js/' + js_output_file)
+    return gulp.src('./public/js/' + js_output_file)
         .pipe(concatjs(js_compressed_file))
         .pipe(terser({
             mangle: {
@@ -69,7 +90,7 @@ gulp.task('js-compress', function () {
         }));
 });
 
-
+// run gulp when sass or js files have changes
 gulp.task('watch', function () {
     gulp.watch(sass_folder, gulp.series('sass-compile', 'css-format'));
     gulp.watch(js_input, gulp.series('js-concat', 'js-compress'));
