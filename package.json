@@ -1,42 +1,12 @@
 {
-<<<<<<< HEAD
-  "name": "birdwatchingapp",
+  "name": "v19-toucans-team-02",
   "version": "1.0.0",
   "description": "Add-project-description-here | Voyage-19 | https://chingu.io/",
   "main": "gulpfile.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chingu-voyages/v19-toucans-team-02.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/chingu-voyages/v19-toucans-team-02/issues"
-  },
-  "homepage": "https://github.com/chingu-voyages/v19-toucans-team-02#readme",
-  "devDependencies": {
-    "gulp": "^4.0.2",
+  "dependencies": {
+    "express": "^4.17.1",
     "nodemon": "^2.0.4"
   },
-  "dependencies": {
-    "express": "^4.17.1"
-=======
-  "name": "01-login",
-  "version": "1.0.0",
-  "description": "Sample application for the new Auth0 SPA SDK",
-  "main": "server.js",
-  "scripts": {
-    "start": "node bin/www",
-    "dev": "nodemon bin/www"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -46,13 +16,20 @@
     "gulp-jsvalidate": "^5.0.0",
     "gulp-notify": "^3.2.0",
     "gulp-sass": "^4.1.0",
-    "gulp-terser": "^1.2.0",
-    "nodemon": "^1.19.2"
+    "gulp-terser": "^1.2.0"
   },
-  "dependencies": {
-    "express": "^4.17.1",
-    "helmet": "^3.21.0",
-    "morgan": "^1.9.1"
->>>>>>> 52198b87b68a636fcbc242d2370c2ee932b3acea
-  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chingu-voyages/v19-toucans-team-02.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chingu-voyages/v19-toucans-team-02/issues"
+  },
+  "homepage": "https://github.com/chingu-voyages/v19-toucans-team-02#readme"
 }
