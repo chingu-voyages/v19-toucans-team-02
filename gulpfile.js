@@ -27,10 +27,10 @@ var gulp = require('gulp'),
 var theme = './',
     sass_file = theme + 'assets/sass/theme.scss',
     sass_folder = theme + 'assets/sass/*.scss',
-    css_output_folder = theme + 'css/',
+    css_output_folder = theme + 'public/css',
     js_input = theme + 'assets/js/*.js',
-    js_output = theme + 'js/',
-    css_output_file = 'style.css',
+    js_output = theme + 'public/js/',
+    css_output_file = 'main.css',
     js_output_file = 'concat.js', 
     js_compressed_file = 'all.min.js';
 
@@ -49,7 +49,7 @@ gulp.task('sass-compile', function () {
 
 // check the css for browser compatibility and compress
 gulp.task('css-format', function () {
-    return gulp.src('./css/*.css')
+    return gulp.src('./public/css/*.css')
         .pipe(autoprefixer('last 3 version'))
         .pipe(concatcss(css_output_file))
         .pipe(cssnano())
@@ -75,7 +75,7 @@ gulp.task('js-concat', function () {
 
 // compress the js file
 gulp.task('js-compress', function () {
-    return gulp.src('./js/' + js_output_file)
+    return gulp.src('./public/js/' + js_output_file)
         .pipe(concatjs(js_compressed_file))
         .pipe(terser({
             mangle: {
