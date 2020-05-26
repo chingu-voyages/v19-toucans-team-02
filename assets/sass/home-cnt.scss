@@ -1,0 +1,38 @@
+#content-home {
+    display: flex;
+
+    .col-l {
+
+        #title {
+            font-size: 35px;
+        }
+
+        #subtitle {
+            position: relative;
+            font-size: 30px;
+            font-style: normal;
+            //top: -20px;
+        }
+
+        #text-main {
+            position: relative;
+            top: -15px;
+        }
+
+        #account-btns {
+            //position: fixed;
+            //top: 370px;
+        }
+    }
+
+    .col-r {
+        
+    }
+
+    #mockupapp {
+        // position: fixed;
+        // right: 10px;
+        // top: 130px;
+        height: 520px;
+    }
+}

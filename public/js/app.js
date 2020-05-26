@@ -4,6 +4,8 @@ let auth0 = null;
 /**
  * Starts the authentication flow
  */
+
+
 const login = async (targetUrl) => {
   try {
     console.log("Logging in", targetUrl);

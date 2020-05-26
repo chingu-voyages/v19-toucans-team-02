@@ -2,59 +2,121 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>The Big Year</title>
-    <meta name="author" content="">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>The Big Year</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="css/main.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d5a5c93a6c.js" crossorigin="anonymous"></script> 
-    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.7/auth0-spa-js.production.js"></script>
-    <script src="http://cdn.auth0.com/js/lock/10.0.0/lock.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
-    
+  <link href="css/main.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d5a5c93a6c.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/1.7/auth0-spa-js.production.js"></script>
+  <script src="http://cdn.auth0.com/js/lock/10.0.0/lock.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <img id="logo" src="images/logo.png">
-        <img id="mockupapp" src="images/mockupapp.png">
-        <div class="main-menu"> 
-            <div class="firstgrid-menu"> 
-                <ul class="horizontal-navbar" id="navlist">
-                    <li id="contact-btn"><a href="#">Contact</a></li>
-                    <li id="about-btn"><a href="#">About</a></li>
-                    <li id="privacy-btn"><a href="#">Privacy</a></li>
-                    <span id="accountbtns">
-                        <li id="join-btn"><a href="#">Join </a></li>
-                        <span id="separator"> | </span>
-                        <li id="signin-btn"><a href="#">Sign In</a></li>
-                    </span>
-                </ul>
-            </div> 
-            <div class="secondgrid-menu">
-                <i class="fab fa-twitter" ></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-instagram"></i>
-            </div>
-        </div> 
-        </div>
-    </header>
-    <section id="main-content">
-       <h1 id="title">Don't miss a sight. <br></h1><p id="subtitle"> Keep your birds tracked with ease.</p>
-       <p id="text-main"> The Big Year app is a fun and easy way to keep your birds <br>together & share them with the world. Add your sights by <br> location,specie, view or sound and prepare to win <br> the Big Year competition.</p>
-        <div class="account-btns">
-            <button class="btn-account btn-space"  id="create-account-btn" onclick="login()"> CREATE ACCOUNT </button>
-            <button class="btn-account btn-space"  id="login-btn" onclick="login()"> LOG IN </button>
-        </div>
-    </section> 
+  <header>
+    <div id="logo"><img id="logo" src="images/logo.png"></div>
+    <div class="main-menu">
+      <div class="firstgrid-menu">
 
-    <footer>
-      Copyright 2020 v19 Toucans Team 02
+        <!-- non logged -->
+        <ul class="horizontal-navbar" id="navlist">
+          <li id="contact-btn"><a href="#">Contact</a></li>
+          <li id="about-btn"><a href="#">About</a></li>
+          <li id="privacy-btn"><a href="#">Privacy</a></li>
+        </ul>
+
+        <!-- logged -->
+        <ul class="horizontal-navbar hidden" id="menu-logged">
+          <li id="profile-btn">
+            <a href="/profile" class="route-link">
+              <i class="fas fa-user"></i> Profile
+            </a>
+          </li>
+
+          <li id="sights-btn"> 
+            <a href="/sights" class="route-link">
+              <i class="fas fa-eye"></i> Sights
+            </a>
+          </li>
+
+          <li id="logout-btn">
+            <!-- add event listener -->
+            <a href="#" id="qsLogoutBtn" onclick="logout()">
+              <i class="fas fa-power-off"></i> Log out
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="secondgrid-menu hidden">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+    </div>
+  </header>
+
+  <section id="main-content">
+
+    <!-- non logged HOMEPAGE -->
+    <div id="content-home" class="page auth-visible hidden">
+      <div class="col-l">
+        <h1 id="title">Don't miss a sight. <br></h1>
+        <p id="subtitle"> Keep your birds tracked with ease.</p>
+        <p> The Big Year app is a fun and easy way to keep your birds <br>together & share them with the
+          world. Add your sights by <br> location,specie, view or sound and prepare to win <br> the Big Year
+          competition.</p>
+
+        <div class="account-btns">
+          <!-- add event listener -->
+          <button class="btn-account btn-space" id="create-account-btn" onclick="login()"> CREATE ACCOUNT </button>
+        </div>
+      </div>
+
+      <div class="col-r">
+        <img id="mockupapp" src="images/mockupapp.png">
+      </div>
+    </div>
+    <!-- non logged HOMEPAGE END -->
+
+
+    <!-- logged PROFILE -->
+    <div id="content-profile" class="page auth-visible hidden">
+
+      <h1>Profile</h1>
+      
+        <div id="profile-data"></div>
+    </div>
+     <!-- logged PROFILE END -->
+
+     <!-- logged PROFILE -->
+    <div id="content-sights" class="page auth-visible hidden">
+
+      <h1>Sights</h1>
+      
+        <div id="sights-data"></div>
+
+
+    </div>
+     <!-- logged PROFILE END -->
+
+  </section>
+
+  <footer>
+    <ul class="horizontal-navbar" id="navlist">
+      <li id="contact-btn"><a href="#">Contact</a></li>
+      <li id="about-btn"><a href="#">About</a></li>
+      <li id="privacy-btn"><a href="#">Privacy</a></li>
+    </ul>
+    Copyright 2020 v19 Toucans Team 02
   </footer>
 
   <script src="js/ui.js"></script>
   <script src="js/app.js"></script>
 </body>
+
 </html>

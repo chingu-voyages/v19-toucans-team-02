@@ -1,4 +1,9 @@
-// sass structure
+// sass structure *******
 @import 'variables';
 @import 'general';
 @import 'responsive';
+
+// Single sections
+@import 'home-cnt';
+@import 'profile-cnt';
+@import 'sights-cnt';

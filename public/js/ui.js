@@ -3,7 +3,10 @@ const router = {
   "/": () => showContent("content-home"),
   "/profile": () =>
     requireAuth(() => showContent("content-profile"), "/profile"),
-  "/login": () => login()
+  "/login": () => login(),
+
+  "/sights": () => requireAuth(() => showContent("content-sights"), "/sights")
+
 };
 
 //Declare helper functions
@@ -69,16 +72,19 @@ const updateUI = async () => {
         2
       );
 
-      document.querySelectorAll("pre code").forEach(hljs.highlightBlock);
+     // document.querySelectorAll("pre code").forEach(hljs.highlightBlock);
 
-      eachElement(".profile-image", (e) => (e.src = user.picture));
-      eachElement(".user-name", (e) => (e.innerText = user.name));
-      eachElement(".user-email", (e) => (e.innerText = user.email));
+      // eachElement(".profile-image", (e) => (e.src = user.picture));
+      // eachElement(".user-name", (e) => (e.innerText = user.name));
+      // eachElement(".user-email", (e) => (e.innerText = user.email));
       eachElement(".auth-invisible", (e) => e.classList.add("hidden"));
       eachElement(".auth-visible", (e) => e.classList.remove("hidden"));
+
     } else {
+
       eachElement(".auth-invisible", (e) => e.classList.remove("hidden"));
       eachElement(".auth-visible", (e) => e.classList.add("hidden"));
+
     }
   } catch (err) {
     console.log("Error updating UI!", err);
