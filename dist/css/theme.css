@@ -1,0 +1,695 @@
+@media only screen and (max-device-width: 400px) {
+  html {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 400px;
+    font-size: xx-small;
+  }
+  #main-content {
+    position: relative;
+    margin-left: -75px;
+  }
+  #title {
+    font-size: 30px !important;
+  }
+  #subtitle {
+    font-size: 18px !important;
+  }
+  #mockupapp {
+    display: none;
+  }
+  #text-main {
+    display: none;
+  }
+  .account-btns {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+  }
+  #accountbtns {
+    display: none;
+  }
+  .secondgrid-menu {
+    display: none;
+  }
+  .horizontal-navbar {
+    display: none;
+  }
+  #mble-menu {
+    display: block;
+    position: static;
+    margin-top: -300px;
+    margin-right: -300px;
+    font-size: 25px;
+  }
+  .user-tabs {
+    display: none;
+  }
+  .main-menu {
+    display: none;
+  }
+  .uploadsight-div {
+    display: none;
+  }
+  #mble-header {
+    display: block;
+    color: #005089;
+    position: fixed;
+    top: 100px;
+    left: 140px;
+    font-size: 12px;
+  }
+  #uploadsight-mble {
+    display: block;
+  }
+  #mblesight-h2 {
+    position: fixed;
+    top: 150px;
+    left: 120px;
+    font-size: 20px;
+    color: #005089;
+  }
+  #camera-len {
+    position: fixed;
+    top: 210px;
+    left: 140px;
+    border: none;
+    background: none;
+    color: #FE9A84;
+    font-size: 90px;
+  }
+  #mble-sightinfo {
+    position: fixed;
+    top: 340px;
+    right: 100px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .soundmble-input {
+    border: none;
+    background: #f1f1f1;
+    height: 30px;
+  }
+  .sightslist-div {
+    display: none;
+  }
+  #listingsmblebutton {
+    position: fixed;
+    top: 120px;
+    right: 150px;
+    width: 300px;
+    height: 25px;
+    border: none;
+    font-size: 14px;
+    padding-top: 5px;
+  }
+  #sightmble-submit {
+    position: fixed;
+    right: 240px;
+    width: 80px;
+  }
+}
+
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) {
+  html {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 400px;
+    font-size: xx-small;
+  }
+  #main-content {
+    position: relative;
+    margin-left: -75px;
+  }
+  #title {
+    font-size: 35px !important;
+  }
+  #subtitle {
+    font-size: 20px !important;
+  }
+  #mockupapp {
+    display: none;
+  }
+  #text-main {
+    display: none;
+  }
+  .account-btns {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+  }
+  #accountbtns {
+    display: none;
+  }
+  .secondgrid-menu {
+    display: none;
+  }
+  .horizontal-navbar {
+    display: none;
+  }
+  #uploadsight-mble {
+    display: block;
+  }
+  #mble-header {
+    display: block;
+    color: #005089;
+    position: fixed;
+    top: 100px;
+    left: 140px;
+    font-size: 12px;
+  }
+  #uploadsight-mble {
+    display: block;
+  }
+  #mblesight-h2 {
+    position: fixed;
+    top: 150px;
+    left: 120px;
+    font-size: 20px;
+    color: #005089;
+  }
+  #camera-len {
+    position: fixed;
+    top: 210px;
+    left: 160px;
+    border: none;
+    background: none;
+    color: #FE9A84;
+    font-size: 100px;
+  }
+  #mble-sightinfo {
+    position: fixed;
+    top: 340px;
+    right: 100px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .soundmble-input {
+    border: none;
+    background: #f1f1f1;
+    height: 30px;
+  }
+  .sightslist-div {
+    display: none;
+  }
+  #mble-menu {
+    display: block;
+    position: static;
+    margin-top: -325px;
+    margin-right: -300px;
+    font-size: 25px;
+  }
+  #listingsmblebutton {
+    position: fixed;
+    top: 120px;
+    right: 150px;
+    width: 300px;
+    height: 25px;
+    border: none;
+    font-size: 14px;
+    padding-top: 5px;
+  }
+  #sightmble-submit {
+    position: fixed;
+    right: 240px;
+    width: 80px;
+  }
+  .uploadsight-div {
+    display: none;
+  }
+  .sightslist-div {
+    display: none;
+  }
+  #about-container {
+    position: fixed;
+    right: 20px;
+    left: 20px;
+    bottom: auto;
+    top: 140px;
+  }
+  #privacy-container {
+    position: fixed;
+    right: 20px;
+    left: 20px;
+    bottom: auto;
+    top: 140px;
+  }
+  #backlistings-btn {
+    width: 150px;
+    height: 35px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-height: 1024px) {
+  #uploadsight-mble {
+    display: none;
+  }
+  #ipadmblemenu {
+    display: none;
+  }
+  .usermenu {
+    display: block;
+  }
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.btn-account {
+  width: 180px;
+  height: 50px;
+  border-radius: 25px;
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1.15px;
+  background-color: #005089;
+  color: #f9f9f9;
+  border: none;
+  outline: none;
+}
+
+.btn-account:hover {
+  background-color: #FE9A84;
+  color: #005089;
+  cursor: pointer;
+}
+
+.btn-space {
+  margin-right: 12px;
+}
+
+#signin-btn {
+  word-spacing: 5px;
+}
+
+#mockupapp {
+  position: fixed;
+  right: 10px;
+  top: 130px;
+  height: 520px;
+}
+
+.fab {
+  margin-left: 20px;
+  font-size: 20px;
+  color: #005089;
+}
+
+.fab:hover {
+  color: #FE9A84;
+  cursor: pointer;
+}
+
+#accountbtns {
+  word-spacing: 12px;
+  margin-left: 70px;
+  font-size: 16px;
+  position: fixed;
+  margin-right: 100px;
+  padding-left: 5px;
+}
+
+#logo {
+  width: 200px;
+  height: 80px;
+  position: fixed;
+  top: 30px;
+  left: 80px;
+}
+
+.main-menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.firstgrid-menu {
+  word-spacing: 30px;
+  position: fixed;
+  top: 40px;
+  right: 400px;
+}
+
+.secondgrid-menu {
+  position: fixed;
+  right: 50px;
+  top: 55px;
+}
+
+li {
+  text-decoration: none;
+  display: inline;
+}
+
+a:link {
+  text-decoration: none;
+  color: #005089;
+}
+
+a:hover {
+  color: #FE9A84;
+}
+
+#title {
+  font-size: 35px;
+}
+
+#subtitle {
+  font-size: 30px;
+  font-style: normal;
+  position: relative;
+  top: -20px;
+}
+
+#text-main {
+  position: relative;
+  top: -15px;
+}
+
+#main-content {
+  position: fixed;
+  left: 100px;
+  top: 160px;
+}
+
+#account-btns {
+  position: fixed;
+  top: 370px;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.nav-toggler {
+  border: 3px solid #fff;
+  padding: 5px;
+  background-color: transparent;
+  height: 39px;
+}
+
+.toggleMenuStyle {
+  background-color: #005089;
+  position: absolute;
+  top: 0;
+  left: 50;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 60%;
+  z-index: 1;
+  opacity: 95%;
+}
+
+.nav-link {
+  color: white;
+  font-size: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.usermenu {
+  position: absolute;
+  right: 80px;
+  bottom: 105px;
+}
+
+.userlogo {
+  position: relative;
+  margin-top: -15px;
+}
+
+#username-text {
+  margin-left: -24px;
+}
+
+.user-tabs {
+  position: fixed;
+  right: 1200px;
+  bottom: 40px;
+  border: none;
+  background-color: #f1f1f1;
+  width: 17%;
+  height: 470px;
+}
+
+.user-tabs button {
+  display: block;
+  background-color: inherit;
+  color: #005089;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 22px;
+}
+
+.user-tabs button:hover {
+  background-color: #FE9A84;
+}
+
+.style-imgbtn {
+  background-color: #005089;
+  border-radius: 8px;
+  opacity: 80%;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 300px;
+}
+
+.style-imgbtn:hover {
+  background-color: #FE9A84;
+  color: #005089;
+}
+
+.style-soundbtn {
+  background-color: #005089;
+  border-radius: 8px;
+  opacity: 80%;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  width: 300px;
+}
+
+.style-soundbtn:hover {
+  background-color: #FE9A84;
+  color: #005089;
+}
+
+input {
+  background-color: #f1f1f1;
+  border: 0px solid;
+  height: 30px;
+  width: 360px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.sight-submit {
+  background-color: #005089;
+  opacity: 90%;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  position: relative;
+  right: -130px;
+}
+
+#sight-submit:hover {
+  background-color: #FE9A84;
+  color: #005089;
+}
+
+.uploadsight-div {
+  position: fixed;
+  bottom: 95px;
+  right: 400px;
+}
+
+#sight-submit {
+  position: fixed;
+  right: 900px;
+}
+
+#uploadPreview {
+  position: fixed;
+}
+
+.sightslist-div {
+  position: absolute;
+  right: 450px;
+  bottom: 440px;
+}
+
+#seemore-btn {
+  background-color: #005089;
+  opacity: 90%;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  position: fixed;
+  top: 600px;
+  right: 400px;
+}
+
+#seemore-btn:hover {
+  background-color: #FE9A84;
+  color: #005089;
+}
+
+.contact-form .form-field {
+  position: relative;
+  margin: 32px 0;
+}
+
+.contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 2px 0;
+  border-color: #005089;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.contact-form .input-text:focus {
+  outline: none;
+}
+
+.contact-form .input-text:focus + .label, .contact-form .input-text.not-empty + .label {
+  -webkit-transform: translateY(-24px);
+          transform: translateY(-24px);
+}
+
+.contact-form .label {
+  position: absolute;
+  left: 20px;
+  bottom: 11px;
+  font-family: Lusitana, serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #888;
+  cursor: text;
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+}
+
+.contact-form .submitform-btn {
+  display: inline-block;
+  background-color: #005089;
+  color: #f9f9f9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  width: 120px;
+  height: 50px;
+  position: fixed;
+  left: 700px;
+}
+
+.contact-form .submitform-btn:hover {
+  background: #FE9A84;
+  color: #005089;
+}
+
+.note {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.note .link {
+  color: #888;
+  text-decoration: none;
+}
+
+.note .link:hover {
+  text-decoration: underline;
+}
+
+#sightslisting-h1 {
+  color: #005089;
+  position: fixed;
+  bottom: 480px;
+  left: 400px;
+}
+
+#singlesight-container {
+  color: #005089;
+}
+
+#editsight-btn, #deletesight-btn {
+  border: none;
+  background: #FE9A84;
+  border-radius: 5px;
+}
+
+.about-container {
+  position: fixed;
+  left: 300px;
+  right: 300px;
+  top: 140px;
+  bottom: 100px;
+}
+/*# sourceMappingURL=theme.css.map */

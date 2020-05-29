@@ -1,0 +1,258 @@
+@media only screen and (max-device-width: 400px) {
+
+html {
+  text-align: center;
+  justify-content: center;
+  width: 400px;
+  font-size: xx-small;
+}
+#main-content {
+  position:relative;
+  margin-left: -75px;
+}
+#title {
+  font-size: 30px !important;
+}
+#subtitle {
+  font-size: 18px !important;
+}
+ 
+#mockupapp {
+    display: none;
+}  
+#text-main {
+    display: none;
+}  
+.account-btns {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+}  
+#accountbtns{
+    display: none;
+}
+.secondgrid-menu{
+    display: none;
+}  
+.horizontal-navbar {
+  display: none;
+}
+#mble-menu {
+  display: block;
+  position: static;
+  margin-top: -300px;
+  margin-right: -300px;
+  font-size: 25px;
+}
+.user-tabs{
+  display: none;
+}
+.main-menu {
+  display: none;
+}
+.uploadsight-div{
+  display: none;
+}
+#mble-header {
+  display: block;
+  color: #005089;
+  position: fixed;
+  top: 100px;
+  left: 140px;
+  font-size: 12px;
+}
+#uploadsight-mble{
+display: block;
+}
+#mblesight-h2{
+  position: fixed;
+  top: 150px;
+  left: 120px;
+  font-size: 20px;
+  color: $darkestBlue;
+}
+#camera-len{
+  position: fixed;
+  top: 210px;
+  left: 140px;
+  border: none;
+  background: none;
+  color: $accentColor;
+  font-size: 90px;
+}
+#mble-sightinfo{
+  position: fixed;
+  top: 340px;
+  right: 100px;
+  width: max-content;
+}
+.soundmble-input{
+  border: none;
+  background: $lightGrey;
+  height: 30px;
+}
+.sightslist-div{
+  display: none;
+}
+
+#listingsmblebutton {
+  position: fixed;
+  top: 120px;
+  right:150px;
+  width: 300px;
+  height: 25px;
+  border: none;
+  font-size: 14px;
+  padding-top: 5px;
+}
+#sightmble-submit {
+  position: fixed;
+  right: 240px;
+  width: 80px;
+}
+}
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px)  {
+  
+  html {
+    text-align: center;
+    justify-content: center;
+    width: 400px;
+    font-size: xx-small;
+  }
+  #main-content {
+    position:relative;
+    margin-left: -75px;
+  }
+  #title {
+    font-size: 35px !important;
+  }
+  #subtitle {
+    font-size: 20px !important;
+  }
+   
+  #mockupapp {
+      display: none;
+  }  
+  #text-main {
+      display: none;
+  }  
+  .account-btns {
+      position: absolute;
+      top: 150px;
+      left: 20px;
+  }  
+  #accountbtns{
+      display: none;
+  }
+  .secondgrid-menu{
+      display: none;
+  }  
+  .horizontal-navbar {
+    display: none;
+  }
+  #uploadsight-mble {
+    display: block;
+  }
+  #mble-header {
+    display: block;
+    color: #005089;
+    position: fixed;
+    top: 100px;
+    left: 140px;
+    font-size: 12px;
+  }
+  #uploadsight-mble{
+  display: block;
+  }
+  #mblesight-h2{
+    position: fixed;
+    top: 150px;
+    left: 120px;
+    font-size: 20px;
+    color: $darkestBlue;
+  }
+  #camera-len{
+    position: fixed;
+    top: 210px;
+    left: 160px;
+    border: none;
+    background: none;
+    color: $accentColor;
+    font-size: 100px;
+  }
+
+  #mble-sightinfo{
+    position: fixed;
+    top: 340px;
+    right: 100px;
+    width: max-content;
+  }
+  .soundmble-input{
+    border: none;
+    background: $lightGrey;
+    height: 30px;
+  }
+  .sightslist-div{
+    display: none;
+  }
+  #mble-menu {
+    display: block;
+    position: static;
+    margin-top: -325px;
+    margin-right: -300px;
+    font-size: 25px;
+  }
+  #listingsmblebutton {
+    position: fixed;
+    top: 120px;
+    right:150px;
+    width: 300px;
+    height: 25px;
+    border: none;
+    font-size: 14px;
+    padding-top: 5px;
+  }
+  #sightmble-submit {
+    position: fixed;
+    right: 240px;
+    width: 80px;
+  }
+  .uploadsight-div{
+    display: none;
+  }
+  .sightslist-div{
+    display: none;
+  }
+  #about-container{
+    position: fixed;
+    right: 20px;
+    left:20px;
+    bottom: auto;
+    top:140px;
+  }
+  #privacy-container{
+    position: fixed;
+    right: 20px;
+    left:20px;
+    bottom: auto;
+    top:140px;
+}
+#backlistings-btn{
+  width: 150px;
+  height: 35px;
+}
+    
+  }
+ 
+@media only screen and (min-device-width: 768px) and (max-device-height: 1024px) {
+  #uploadsight-mble {
+    display: none;
+  }
+  #ipadmblemenu {
+    display: none;
+  }
+  .usermenu {
+    display: block;
+  }
+
+}

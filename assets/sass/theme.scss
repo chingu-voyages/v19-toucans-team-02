@@ -1,0 +1,373 @@
+@import 'variables';
+@import 'responsive';
+
+
+html {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  background-color: $white;
+}
+.btn-account {
+  width: 180px;
+  height: 50px;
+  border-radius: 25px;
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1.15px;
+  background-color: $darkestBlue;
+  color: $white;
+  border: none;
+  outline: none;
+}
+.btn-account:hover{
+  background-color: $accentColor;
+  color:$darkestBlue;
+  cursor: pointer;
+}
+.btn-space {
+  margin-right:12px;
+}
+#signin-btn{
+  word-spacing:5px;
+}
+#mockupapp {
+  position: fixed;
+  right: 10px;
+  top:130px;
+  height: 520px;
+}
+.fab{
+  margin-left: 20px;
+  font-size: 20px;  
+  color: $darkestBlue;
+} 
+.fab:hover {
+  color: $accentColor;
+  cursor: pointer;
+}
+#accountbtns{
+  word-spacing: 12px;
+  margin-left: 70px;
+  font-size: 16px;
+  position: fixed;
+  margin-right: 100px;
+  padding-left:5px;
+}
+#logo{
+  width:200px;
+  height:80px;
+  position:fixed;
+  top:30px;
+  left:80px;
+}
+.main-menu {
+  display: inline-flex;
+}
+.firstgrid-menu{
+  word-spacing: 30px;
+  position: fixed;
+  top:40px;
+  right:400px;
+}
+.secondgrid-menu{
+  position: fixed;
+  right: 50px;
+  top:55px;
+}
+li {
+  text-decoration: none;
+  display: inline;
+}
+a:link {
+  text-decoration: none;
+  color: $darkestBlue;
+}
+a:hover{
+  color: $accentColor;
+}
+#title{
+  font-size: 35px;
+}
+#subtitle {
+  font-size: 30px;
+  font-style: normal;
+  position: relative;
+  top: -20px;
+}
+#text-main{
+  position: relative;
+  top: -15px;
+}
+
+#main-content{
+  position: fixed;
+  left: 100px;
+  top: 160px;
+}
+#account-btns{
+  position: fixed;
+  top: 370px;
+}
+footer {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+}
+.hide {
+  display: none;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+.nav-toggler {
+  border: 3px solid #fff;
+  padding: 5px;
+  background-color: transparent;
+  height: 39px;
+}
+.toggleMenuStyle {
+  background-color: #005089;
+  position: absolute;
+  top: 0;
+  left: 50;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 60%;
+  z-index: 1;
+  opacity: 95%;
+}
+.nav-link {
+    color: white;
+    font-size: 30px;
+    align-items: center;
+}
+.usermenu {
+  position: absolute;
+  right: 80px;
+  bottom: 105px;
+}
+
+.userlogo {
+  position: relative;
+  margin-top: -15px;
+}
+#username-text {
+  margin-left: -24px;
+}
+.user-tabs {
+  position: fixed;
+  right: 1200px;
+  bottom: 40px;
+  border: none;
+  background-color: #f1f1f1;
+  width: 17%;
+  height: 470px;
+}
+.user-tabs button {
+  display: block;
+  background-color: inherit;
+  color: $darkestBlue;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 22px;
+}
+.user-tabs button:hover {
+  background-color: $accentColor;
+}
+
+.style-imgbtn {
+  background-color: $darkestBlue;
+  border-radius: 8px;
+  opacity:80%;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 300px;
+}.style-imgbtn:hover{
+  background-color: $accentColor;
+  color: $darkestBlue;
+}
+.style-soundbtn{
+  background-color: $darkestBlue;
+  border-radius: 8px;
+  opacity:80%;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  width: 300px;
+}.style-soundbtn:hover{
+  background-color: $accentColor;
+  color: $darkestBlue;
+}
+input {
+  background-color: $lightGrey;
+  border: 0px solid;
+  height:30px;
+  width:360px;
+}
+input:focus {
+  outline:none;
+}
+.sight-submit{
+  background-color: $darkestBlue;
+  opacity: 90%;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  position: relative;
+  right: -130px;
+}#sight-submit:hover {
+  background-color: $accentColor;
+  color: $darkestBlue;
+}
+.uploadsight-div {
+   position: fixed;
+   bottom: 95px;
+   right: 400px;
+}
+#sight-submit{
+  position: fixed;
+  right: 900px;
+}
+#uploadPreview{
+  position: fixed;
+}
+.sightslist-div{
+  position: absolute;
+  right: 450px;
+  bottom: 440px;
+}
+#seemore-btn{
+  background-color: $darkestBlue;
+  opacity: 90%;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  position: fixed;
+  top: 600px;
+  right: 400px;
+}#seemore-btn:hover {
+  background-color: $accentColor;
+  color: $darkestBlue;
+}
+.contact-form {
+  .form-field {
+     position: relative;
+     margin: 32px 0;
+  }
+  .input-text {
+     display: block;
+     width: 100%;
+     height: 36px;
+     border-width: 0 0 2px 0;
+     border-color: $darkestBlue;
+     font-size: 18px;
+     line-height: 26px;
+     font-weight: 400;
+     
+     &:focus {
+        outline: none;
+     }
+     
+     &:focus,
+     &.not-empty {
+        + .label {
+           transform: translateY(-24px);
+        }
+     }
+  }
+  .label {
+     position: absolute;
+     left: 20px;
+     bottom: 11px;
+     font-family: Lusitana, serif;
+     font-size: 18px;
+     line-height: 26px;
+     font-weight: 400;
+     color: #888;
+     cursor: text;
+     transition: transform .2s ease-in-out;
+  }
+  
+  .submitform-btn {
+     display: inline-block;
+     background-color: $darkestBlue;
+     color: $white;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     font-size: 16px;
+     line-height: 24px;
+     padding: 8px 16px;
+     border: none;
+     cursor: pointer;
+     width: 120px;
+     height: 50px;
+     position: fixed;
+     left: 700px;
+  }
+  .submitform-btn:hover{
+    background: $accentColor;
+    color: $darkestBlue;
+  }
+}
+
+.note {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 21px;
+  
+  .link {
+     color: #888;
+     text-decoration: none;
+     &:hover {
+        text-decoration: underline;
+     }
+  }
+  }
+  #sightslisting-h1{
+    color: $darkestBlue;
+    position: fixed;
+    bottom: 480px;
+    left: 400px;
+  }
+  #singlesight-container{
+    color:$darkestBlue;
+  }
+  #editsight-btn, #deletesight-btn{
+   border: none;
+   background: $accentColor;
+   border-radius: 5px;
+  }
+  .about-container{
+    position: fixed;
+    left: 300px;
+    right: 300px;
+    top: 140px;
+    bottom:100px;
+  }
