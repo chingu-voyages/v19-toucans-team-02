@@ -9,47 +9,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="dist/css/theme.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d5a5c93a6c.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d5a5c93a6c.js" crossorigin="anonymous"></script> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <script defer src="js/singlesight.js"></script>
     <script defer src="js/sightslisting.js"></script>
 
 
 </head>
-
 <body>
-    <header>
-        <img id="logo" class="userlogo" src="./assets/img/logo.png" />
-        <div class="main-menu">
-            <div class="firstgrid-menu usermenu">
-                <ul class="horizontal-navbar" id="navlist"><span id="welcome-msg">Hello,<span id="username-text">
-                            USERNAME</span></span>
-                    <li id="contact-btn"><a href="contact.html" target="_blank">Contact</a></li>
-                    <li id="about-btn"><a href="#">About</a></li>
-                    <li id="privacy-btn"><a href="#">Privacy</a></li>
-                    <hr>
-                </ul>
-            </div>
-        </div>
-        </div>
-    </header>
+  <header>
+      <img id="logo" class="userlogo" src="./assets/img/logo.png" />
+      <div class="main-menu"> 
+          <div class="firstgrid-menu usermenu"> 
+              <ul class="horizontal-navbar" id="navlist"><span id="welcome-msg">Hello,<span id="username-text"> USERNAME</span></span>
+                  <li id="contact-btn"><a href="contact.html" target="_blank">Contact</a></li>
+                  <li id="about-btn"><a href="#">About</a></li>
+                  <li id="privacy-btn"><a href="#">Privacy</a></li>
+                  <hr>
+              </ul>
+          </div> 
+      </div> 
+      </div>
+      </header>
+      <body>
 
-    <body>
+        <!-- add a sight form -->
+        <form id="sight-form">
+            <div class="form-group">
+              <label for="name">Bird Name: </label>
+              <input type="text" id="name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="date">Date Spotted:</label>
+              <input type="text" id="date" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="specie">Specie: </label>
+              <input type="text" id="specie" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="location">Location: </label>
+                <input type="text" id="location" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="other">Other Observations: </label>
+                <input type="text" id="other" class="form-control">
+              </div>
+            <input type="submit" value="Add Sight" class="btn btn-primary btn-block">
+          </form>
+          <!-- add a sight form end -->
+
+          <!-- sights listing table -->
+          <table class="table table-striped mt-5">
+            <thead>
+              <tr>
+                <th>Sight Information:</th>
+                <th>Bird Name:</th>
+                <th>Date Spotted:</th>
+                <th>Specie:</th>
+                <th>Location:</th>
+                <th>Other Observations:</th>
+              </tr>
+            </thead>
+            <tbody id="sights-list"></tbody>
+          </table>
+          <!-- sights listing table end -->
+
         <div id="singlesight-container">
-            <div id="img-bird"></div><br>
-            <h3 id="sightinfo-p"> Sight Information:</h3><br>
-            <p id="birdname-p"> Bird Name: </p><span id="birdname-input"></span>
-            <p id="datespotted-p"> Date Spotted: </p><span id="date-input"></span>
-            <p id="specie-p"> Specie: </p><span id="specie-input"></span>
-            <p id="location-p"> Location: </p><span id="location-input"></span>
-            <p id="otherobservations-p"> Other Observations: </p><span id="otherobservations-input"></span>
-        </div><br>
-        <div id="sight-btns">
-            <button id="editsight-btn"><i class="far fa-edit"></i> Edit</button>
-            <button id="deletesight-btn"><i class="far fa-trash-alt"></i> Delete</button><br><br>
-            <button id="backlistings-btn" class="btn-account"><a style="color: white;" href="sigthslisting.html">Back to
-                    Sight Listing</a></button>
+          <div id="img-bird"></div><br>
+          <h3 id="sightinfo-p"> Sight Information:</h3><br>
+          <p id="birdname-p"> Bird Name: </p><span id="birdname-input"></span>
+          <p id="datespotted-p"> Date Spotted: </p><span id="date-input"></span>
+          <p id="specie-p"> Specie: </p><span id="specie-input"></span>
+          <p id="location-p"> Location: </p><span id="location-input"></span>
+          <p id="otherobservations-p"> Other Observations: </p><span id="otherobservations-input"></span>
+          </div><br>
+          <div id="sight-btns">
+          <button id="editsight-btn"><i class="far fa-edit"></i> Edit</button>
+          <button id="deletesight-btn"><i class="far fa-trash-alt"></i> Delete</button><br><br>
+          <button id="backlistings-btn" class="btn-account"><a style="color: white;" href="sigthslisting.html" >Back to Sight Listing</a></button>
         </div>
+
+
+
+
+    
 
 
         </div>
