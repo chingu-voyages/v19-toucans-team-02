@@ -1,50 +1,42 @@
 @media only screen and (max-device-width: 400px) {
   html {
     text-align: center;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 400px;
     font-size: xx-small;
   }
-
   #main-content {
     position: relative;
     margin-left: -75px;
   }
-
   #title {
     font-size: 30px !important;
   }
-
   #subtitle {
     font-size: 18px !important;
   }
-
   #mockupapp {
     display: none;
   }
-
   #text-main {
     display: none;
   }
-
   .account-btns {
     position: absolute;
     top: 150px;
     left: 20px;
   }
-
   #accountbtns {
     display: none;
   }
-
   .secondgrid-menu {
     display: none;
   }
-
   .horizontal-navbar {
     display: none;
   }
-
   #mble-menu {
     display: block;
     position: static;
@@ -52,19 +44,15 @@
     margin-right: -300px;
     font-size: 25px;
   }
-
   .user-tabs {
     display: none;
   }
-
   .main-menu {
     display: none;
   }
-
   .uploadsight-div {
     display: none;
   }
-
   #mble-header {
     display: block;
     color: #005089;
@@ -73,11 +61,9 @@
     left: 140px;
     font-size: 12px;
   }
-
   #uploadsight-mble {
     display: block;
   }
-
   #mblesight-h2 {
     position: fixed;
     top: 150px;
@@ -85,7 +71,6 @@
     font-size: 20px;
     color: #005089;
   }
-
   #camera-len {
     position: fixed;
     top: 210px;
@@ -95,24 +80,22 @@
     color: #FE9A84;
     font-size: 90px;
   }
-
   #mble-sightinfo {
     position: fixed;
     top: 340px;
     right: 100px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
   }
-
   .soundmble-input {
     border: none;
     background: #f1f1f1;
     height: 30px;
   }
-
   .sightslist-div {
     display: none;
   }
-
   #listingsmblebutton {
     position: fixed;
     top: 120px;
@@ -123,7 +106,6 @@
     font-size: 14px;
     padding-top: 5px;
   }
-
   #sightmble-submit {
     position: fixed;
     right: 240px;
@@ -134,54 +116,45 @@
 @media only screen and (min-device-width: 411px) and (max-device-width: 823px) {
   html {
     text-align: center;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 400px;
     font-size: xx-small;
   }
-
   #main-content {
     position: relative;
     margin-left: -75px;
   }
-
   #title {
     font-size: 35px !important;
   }
-
   #subtitle {
     font-size: 20px !important;
   }
-
   #mockupapp {
     display: none;
   }
-
   #text-main {
     display: none;
   }
-
   .account-btns {
     position: absolute;
     top: 150px;
     left: 20px;
   }
-
   #accountbtns {
     display: none;
   }
-
   .secondgrid-menu {
     display: none;
   }
-
   .horizontal-navbar {
     display: none;
   }
-
   #uploadsight-mble {
     display: block;
   }
-
   #mble-header {
     display: block;
     color: #005089;
@@ -190,11 +163,9 @@
     left: 140px;
     font-size: 12px;
   }
-
   #uploadsight-mble {
     display: block;
   }
-
   #mblesight-h2 {
     position: fixed;
     top: 150px;
@@ -202,7 +173,6 @@
     font-size: 20px;
     color: #005089;
   }
-
   #camera-len {
     position: fixed;
     top: 210px;
@@ -212,24 +182,22 @@
     color: #FE9A84;
     font-size: 100px;
   }
-
   #mble-sightinfo {
     position: fixed;
     top: 340px;
     right: 100px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
   }
-
   .soundmble-input {
     border: none;
     background: #f1f1f1;
     height: 30px;
   }
-
   .sightslist-div {
     display: none;
   }
-
   #mble-menu {
     display: block;
     position: static;
@@ -237,7 +205,6 @@
     margin-right: -300px;
     font-size: 25px;
   }
-
   #listingsmblebutton {
     position: fixed;
     top: 120px;
@@ -248,21 +215,17 @@
     font-size: 14px;
     padding-top: 5px;
   }
-
   #sightmble-submit {
     position: fixed;
     right: 240px;
     width: 80px;
   }
-
   .uploadsight-div {
     display: none;
   }
-
   .sightslist-div {
     display: none;
   }
-
   #about-container {
     position: fixed;
     right: 20px;
@@ -270,7 +233,6 @@
     bottom: auto;
     top: 140px;
   }
-
   #privacy-container {
     position: fixed;
     right: 20px;
@@ -278,7 +240,6 @@
     bottom: auto;
     top: 140px;
   }
-
   #backlistings-btn {
     width: 150px;
     height: 35px;
@@ -289,11 +250,9 @@
   #uploadsight-mble {
     display: none;
   }
-
   #ipadmblemenu {
     display: none;
   }
-
   .usermenu {
     display: block;
   }
@@ -302,9 +261,15 @@
 html {
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: 'Montserrat', sans-serif;
   background-color: #f9f9f9;
 }
@@ -373,6 +338,8 @@ html {
 }
 
 .main-menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
@@ -468,7 +435,9 @@ label {
 .nav-link {
   color: white;
   font-size: 30px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .usermenu {
@@ -506,6 +475,7 @@ label {
   outline: none;
   text-align: left;
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   font-size: 22px;
 }
@@ -636,9 +606,9 @@ input:focus {
   outline: none;
 }
 
-.contact-form .input-text:focus + .label,
-.contact-form .input-text.not-empty + .label {
-  transform: translateY(-24px);
+.contact-form .input-text:focus + .label, .contact-form .input-text.not-empty + .label {
+  -webkit-transform: translateY(-24px);
+          transform: translateY(-24px);
 }
 
 .contact-form .label {
@@ -651,7 +621,10 @@ input:focus {
   font-weight: 400;
   color: #888;
   cursor: text;
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
 .contact-form .submitform-btn {
@@ -706,8 +679,7 @@ input:focus {
   color: #005089;
 }
 
-#editsight-btn,
-#deletesight-btn {
+#editsight-btn, #deletesight-btn {
   border: none;
   background: #FE9A84;
   border-radius: 5px;
@@ -720,3 +692,4 @@ input:focus {
   top: 140px;
   bottom: 100px;
 }
+/*# sourceMappingURL=theme.css.map */

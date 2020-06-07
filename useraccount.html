@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>The Big Year</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="dist/css/theme.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d5a5c93a6c.js" crossorigin="anonymous"></script> 
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.7/auth0-spa-js.production.js"></script>
+    <script src="http://cdn.auth0.com/js/lock/10.0.0/lock.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <script defer src="js/useraccount.js"></script>
+</head>
+<body>
+  <header>
+      <div id="mble-menu" class="hide"><i id="ipadmblemenu" class="fas fa-bars nav-toggler"></i></div>
+          <ul id="toggle-menu" class="hide"><br><br>
+              <li><a class="nav-link" href="#">About</a></li><br>
+              <li><a class="nav-link" href="#">Privacy</a></li><br>
+              <li><a class="nav-link" href="./sigthslisting.html">My Sights Listing</a></li><br>
+              <li><a class="nav-link" href="#">My Account Settings</a></li><br>
+              <li><a class="nav-link" href="contact.html" target="_blank">Contact</a></li><br>
+              <li><a class="nav-link" href="#">Log Off</a></li><br>         
+              <br><br>
+              <li><i class="nav-link fab fa-twitter" ></i></li>
+              <li><i class="nav-link fab fa-facebook-f"></i></li>
+              <li><i class="nav-link fab fa-instagram"></i></li><br><br>
+              <li ><a class="nav-link" href="#"><i class="fas fa-times close-link"></i> </a></li>
+          </ul>
+      </div>
+      <img id="logo" class="userlogo" src="./assets/img/logo.png" />
+      <div id="mble-header" class="hide"> Hello, USERNAME</div>
+      <div class="user-tabs">
+        <button class="tablinks"><a href="sigthslisting.html" target="_blank"> My Sights Listing </a></button>
+        <button class="tablinks">My Account Settings</button>
+        <button class="tablinks">Log Off</button>
+      </div>
+      <div class="main-menu"> 
+          <div class="firstgrid-menu usermenu"> 
+              <ul class="horizontal-navbar" id="navlist"><span id="welcome-msg">Hello,<span id="username-text"> USERNAME</span></span>
+                  <li id="contact-btn"><a href="contact.html" target="_blank">Contact</a></li>
+                  <li id="about-btn"><a href="about.html">About</a></li>
+                  <li id="privacy-btn"><a href="privacy.html">Privacy</a></li>
+                  <hr>
+              </ul>
+          </div> 
+      </div> 
+      </div>
+  </header>
+  <body>
+    <div class="uploadsight-div">
+         <h2 id="uploadsigh-h1">Upload A Sight</h2>
+         <label class="style-imgbtn" for="image_uploads">Choose image to upload (PNG, JPG)</label>
+         <input type="file" id="image_uploads" name="image_uploads" style="visibility:hidden"accept=".jpg, .jpeg, .png" multiple>
+         <label class="style-soundbtn"for="sound_uploads">Choose sound to upload </label>
+         <input type="file" id="sound_uploads" accept="audio/*" style="visibility:hidden">
+        <div class="preview"></div>
+        <label class="specie-input" for="specie-uploads"> Add specie: </label><input type="text" id="specie-uploads">
+        <label class="location-input" for="location-uploads"> Add location: </label><input type="text" id="location-uploads">
+        <label class="otherinfo-input" for="otherinfo-uploads"> Add any other commentaries: </label><input type="text" id="otherinfo-uploads"><br><br>
+        <img id="uploadPreview" class="hide" style="width: 50px; height: 50px"><button id="sight-submit" class="sight-submit">Submit</button>
+    </div>
+    <div class="sightslist-div">
+        <h2 id="sightslist-h1">My Sights</h2><br>
+        <div id="sights-preview"></div>
+        <button id="seemore-btn" class="seemore-btn"><a style=color:white href="sigthslisting.html" target="_blank"> See more </a></button>
+    </div>
+    <div id="uploadsight-mble" class="hide">
+    <a id="listingsmblebutton" class="sight-submit" href="sigthslisting.html"> Go To My Listings </a>
+        <h2 id="mblesight-h2">Upload A Sight</h2>
+        <button id="camera-len"><i class="fas fa-bullseye"></i></button><br>
+        <div id="mble-sightinfo">
+        <label class="soundmble-input"for="sound_uploads">Choose sound to upload </label>
+            <input type="file" id="sound_uploads" accept="audio/*" style="visibility:hidden">
+            <label class="specie-input" for="specie-uploads"> Add specie: </label><input type="text" id="specie-uploads">
+            <label class="location-input" for="location-uploads"> Add location: </label><input type="text" id="location-uploads">
+            <label class="otherinfo-input" for="otherinfo-uploads"> Add any other commentaries: </label><input type="text" id="otherinfo-uploads"><br><br>
+            <img id="uploadPreview" class="hide" style="width: 50px; height: 50px"><button id="sight-submit">Submit</button>
+            <button id="sightmble-submit" class="sight-submit">Submit</button>
+        </div>
+    </div>
+  </body>
+  <footer>
+    Copyright 2020 v19 Toucans Team 02
+</footer>
+</html>
