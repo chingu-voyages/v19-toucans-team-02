@@ -1,12 +1,10 @@
 // URL mapping, from hash to a function that responds to that URL action
 const router = {
   "/": () => showContent("content-home"),
-  "/profile": () =>
-    requireAuth(() => showContent("content-profile"), "/profile"),
+  "/profile": () =>requireAuth(() => showContent("content-profile"), "/profile"),
   "/login": () => login(),
-
-  "/sights": () => requireAuth(() => showContent("content-sights"), "/sights")
-
+  "/sights": () => requireAuth(() => showContent("content-sights"), "/sights"),
+  "/home": () => requireAuth(() => showContent("home"), "/home")
 };
 
 //Declare helper functions
@@ -53,6 +51,7 @@ const isRouteLink = (element) =>
  */
 const showContent = (id) => {
   eachElement(".page", (p) => p.classList.add("hidden"));
+  eachElement(".menu", (p) => p.classList.add("hidden"));
   document.getElementById(id).classList.remove("hidden");
 };
 
@@ -72,8 +71,7 @@ const updateUI = async () => {
         2
       );
 
-     // document.querySelectorAll("pre code").forEach(hljs.highlightBlock);
-
+      // document.querySelectorAll("pre code").forEach(hljs.highlightBlock);
       // eachElement(".profile-image", (e) => (e.src = user.picture));
       // eachElement(".user-name", (e) => (e.innerText = user.name));
       // eachElement(".user-email", (e) => (e.innerText = user.email));

@@ -127,96 +127,191 @@ window.onload = async () => {
   updateUI();
 };
 
-// Sight object
-class Sight {
-    constructor(name, location, image) {
-        this.name = name;
-        this.location = location;
-        this.image = image;
+// phone camera access
+/*
+const supported = 'mediaDevices' in navigator;
+
+const player = document.getElementById('player');
+const canvas = document.getElementById('canvas');
+const context = canvas.getContext('2d');
+const captureButton = document.getElementById('capture');
+
+  const constraints = {
+    video: true,
+  };
+
+// permission eed to be asked
+  captureButton.addEventListener('click', () => {
+    // Draw the video frame to the canvas.
+    context.drawImage(player, 0, 0, canvas.width, canvas.height);
+    player.srcObject.getVideoTracks().forEach(track => track.stop());
+  });
+
+  // Attach the video stream to the video element and autoplay.
+  navigator.mediaDevices.getUserMedia(constraints)
+    .then((stream) => {
+      player.srcObject = stream;
+    });
+*/
+// *************************************
+
+
+// book class - object 
+class Book {
+    constructor(title, author, isbn) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
     }
 }
 
-// Interface
+// ui class - interface
 class UI {
+    static displayBooks() {
 
-    // get db ->
-    static displaySights() {
-
-        // get data from database - dummy for now
-        const recSights = [
+        // get data from database
+        //const books = Store.getBooks();
+        const books = [
             {
-                name: 'Bird one',
-                location: '0, 0', // coordinates
-                image: 'alpha.png' // check camera integration/libraries
+                title: 'I Robot',
+                author: 'Isaac asimov',
+                isbn: '23768'
             },
             {
-                name: 'Bird two',
-                location: '1, 1', // coordinates
-                image: 'beta.png' // check camera integration/libraries
+                title: 'Il Sole Nudo',
+                author: 'Isaac asimov',
+                isbn: '8439'
             },
             {
-                name: 'Bird three',
-                location: '2, 2', // coordinates
-                image: 'gamma.png' // check camera integration/libraries
+                title: '1984',
+                author: 'Orwell',
+                isbn: '0982'
             }
-           
-        ];
+        ]
 
-        const sights = recSights;
-
-        sights.forEach((sight) => UI.addSight(sight));
-        // need to count 
+       books.forEach((book) => UI.addBookToList(book));
 
     }
 
-    static addSight(sight) {
+    static addBookToList(book) {
         // add to database, connect to user
-        const sights = document.querySelector('#sights');
+        const list = document.querySelector('#book-list');
 
         const row = document.createElement('tr');
 
-        // row data
         row.innerHTML = `
-        <td>${sight.name}</td> 
-        <td>${sight.location}</td>
-        <td>${sight.image}</td>
-        <td><a href="#">remove</a></td>
+        <td>${book.title}</td>
+        <td>${book.author}</td>
+        <td>${book.isbn}</td>
+        <td><a href="#" class="delete">delete</a></td>
         `;
 
-        sights.appendChild(row);
+        list.appendChild(row);
 
     }
 
     static clearForm() {
-        document.querySelector('#name').value = '';
-        document.querySelector('#location').value = '';
-        document.querySelector('#image').value = '';
+        document.querySelector('#title').value = '';
+        document.querySelector('#author').value = '';
+        document.querySelector('#isbn').value = '';
     }
+
+    // alert messages
+    /* static showAlert(message, style){
+        const div = document.createElement('div');
+
+        div.style = `alert -${style}`;
+        div.appendChild(document.createTextNode(message));
+
+    } */
 
     // delete by id
-    static deleteSight() {
+    static deleteBook(el) {
+        if (el.classList.contains('delete')) {
+            el.parentElement.parentElement.remove();
+        }
+    }
+}
+
+// store class - save, storage
+class Store {
+
+   static getBooks() {
+        let books;
+        if (localStorage.getItem('books') === null) {
+            books = [];
+        } else {
+            books = JSON.parse(localStorage.getItem('books')); // JSON format
+
+        }
+
+    } 
+
+    static addBook(book) { // id ?
+        const books = Store.getBooks();
+
+        books.push(book);
+
+      //  localStorage.setItem('books', JSON.stringify(books));
 
     }
 
+    static removeBook(isbn) { // id ?
+
+        const books = Store.getBooks();
+
+        books.forEach((book, index) => {
+            if (book.isbn === isbn) {
+                books.splice(index, 1);
+            }
+        }); 
+
+      localStorage.setItem('books', JSON.stringify(books));
+    }
 }
+// ************************
 
-document.addEventListener('DOMContentLoaded', UI.displaySights);
+// events class display stuff
+document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
-// add sight
-document.querySelector('#addSight').addEventListener('submit', (e) => {
+// Add an Item
+document.querySelector('#book-form').addEventListener('submit', (e) => {
     e.preventDefault();
     // get the info
-    const name = document.querySelector('#name').value;
-    const location = document.querySelector('#location').value; // geolocation API -> openmap
-    const image = document.querySelector('#image').value;
+    const title = document.querySelector('#title').value;
+    const author = document.querySelector('#author').value;
+    const isbn = document.querySelector('#isbn').value;
 
-    // inst. sight
-    const sight = new Sight(name, location, image);
 
-    console.log(sight);
-    UI.addSight(sight);
+    if (title === '' || author === '' || isbn === '') {
+        alert('fields missing');
+        // UI.showAlert('missing fiels', 'red');
+    } else {
+        // create the book
+        const book = new Book(title, author, isbn);
+
+        // success message
+        //UI.showAlert('success', '')
+
+        console.log(book);
+        UI.addBookToList(book);
+        UI.clearForm();
+        Store.addBook(book);
+
+
+    }
+
 
 });
+
+
+// delete book
+// target element
+document.querySelector('#book-list').addEventListener('click', (e) => {
+    // console.log(e.target);
+    UI.deleteBook(e.target);
+});
+
 
 // URL mapping, from hash to a function that responds to that URL action
 const router = {
